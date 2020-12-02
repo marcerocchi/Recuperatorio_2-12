@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container-fluid mt-3">
+    <div class="jumbotron">
+      <h1>Recuperatorio 01-12 Rocchi</h1>
+      <br>
+      <Navbar />
+      <router-view />
+
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import Navbar from './components/Navbar.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //Navbar
   }
 }
 </script>
@@ -21,6 +29,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
